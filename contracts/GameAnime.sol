@@ -121,7 +121,7 @@ contract GameAnime is ERC721, VRFConsumerBase, Ownable {
         return characters.length;
     }
 
-    function changeCharacterName(uint256 tokenId, string memory _newName)
+    function changeCharacterName(uint256 tokenId, string memory updatedTokenURI)
         public
         payable
     {
@@ -129,8 +129,12 @@ contract GameAnime is ERC721, VRFConsumerBase, Ownable {
             msg.value == 0.05 ether,
             "You need to send 0.05 ETH to edit the Name"
         );
-        balances[owner()] += msg.value;
-        return characters[tokenId].name = _newName;
+        require(
+            _isApprovedOrOwner(_msgSender(), tokenId),
+            "ERC721: transfer caller is not owner nor approved"
+        );
+        (payable(owner())).transfer(0.05 ether);
+        _setTokenURI(tokenId, updatedTokenURI);
     }
 
     function getCharacterOverView(uint256 tokenId)
