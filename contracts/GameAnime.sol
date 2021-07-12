@@ -123,7 +123,13 @@ contract GameAnime is ERC721, VRFConsumerBase, Ownable {
 
     function changeCharacterName(uint256 tokenId, string memory _newName)
         public
+        payable
     {
+        require(
+            msg.value == 0.05 ether,
+            "You need to send 0.05 ETH to edit the Name"
+        );
+        balances[owner()] += msg.value;
         return characters[tokenId].name = _newName;
     }
 
