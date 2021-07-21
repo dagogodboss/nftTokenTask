@@ -16,8 +16,8 @@ Then you can get started with:
 ### Clone The Repo and migrate
 
 ```
-git clone https://github.com/PatrickAlphaC/dungeons-and-dragons-nft
-cd dungeons-and-dragons-nft
+https://github.com/dagogodboss/nftTokenTask
+cd nftTokenTask
 npm install
 truffle migrate --reset --network rinkeby
 ```
