@@ -1,6 +1,6 @@
 # Create An ERC721 Token.
 
-## Task From Black Eye Galaxy
+## Task
 
 create a contract for erc721 token (you can take templates for base) that will generate nft for creator wallet,
 nft should include video as media resource and be compatible with opesea (to have ability sell on this marketplace).
