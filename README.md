@@ -2,10 +2,10 @@
 
 ## Task
 
-create a contract for erc721 token (you can take templates for base) that will generate nft for creator wallet,
-nft should include video as media resource and be compatible with opesea (to have ability sell on this marketplace).
-Also owner of nft should have ability change nft name (like it was in cryptokitties),
-price for name change is 0.05 ETH that should be transferred to the initial wallet of the contract creator
+create a contract for erc721 token that will generate nft for creator wallet,
+nft include images as media resource and is compatible with opesea (to have ability sell on this marketplace).
+Also owner of nft has ability change nft name (like it was in cryptokitties),
+price for name change is 0.05 ETH that is be transferred to the initial wallet of the contract creator
 
 ## Quickstart
 
